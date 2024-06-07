@@ -14,3 +14,13 @@ No es necesario crear una base de datos, ya que el programa lo realiza al ejecut
 
 Metodos:
 ![image](https://github.com/KevinM97/backendTestAltiora/assets/58663814/00c501d9-7ce8-43c1-99ae-2a5909be914b)
+
+
+Arquitectura de la solución
+Clean Arquitecture
+
+![image](https://github.com/KevinM97/backendTestAltiora/assets/58663814/5bcbf12b-1a4b-449b-8b74-03a3bae43303)
+
+Domain: Se encuentran las entidades de negocio de la aplicación
+Application: Reglas del negocio ( Interfaces, ViewModels, patron de segración de responsabilidades CQRS
+Infrastructure: Se encuentra las interfaces implementadas
