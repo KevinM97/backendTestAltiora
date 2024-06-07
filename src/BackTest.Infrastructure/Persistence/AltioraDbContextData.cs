@@ -81,6 +81,28 @@ namespace BackTest.Infrastructure.Persistence
                     await context.SaveChangesAsync();
                 }
 
+                if (!context.Orders!.Any())
+                {
+                    var uno = new Order
+                    {
+                        Codigo = "OC-00001",
+                        Fecha = DateTime.Now,
+                        Total= 50,
+                        CustomerId = 1,
+                    };
+                    await context.AddAsync(uno);
+
+                    var dos = new Order
+                    {
+                        Codigo = "OC-00002",
+                        Fecha = DateTime.Now,
+                        Total = 50,
+                        CustomerId = 2,
+                    };
+                    await context.AddAsync(dos);
+                    await context.SaveChangesAsync();
+                }
+
             }
             catch (Exception e)
             {
